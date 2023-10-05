@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './NavBar.css';  // Import your CSS stylesheet if you have one
+import { Link } from 'react-router-dom';  // Import Link from react-router-dom
+import './NavBar.css';
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
@@ -11,10 +12,9 @@ const Navbar = () => {
   return (
     <nav>
       <div className="nav__logo">
-        <a href="/">
+        <Link to="/">  {/* Use Link here */}
           StayHealthy
-          {/* Your SVG here */}
-        </a>
+        </Link>
         <span>.</span>
       </div>
       <div className="nav__icon" onClick={handleClick}>
@@ -22,20 +22,20 @@ const Navbar = () => {
       </div>
       <ul className={`nav__links ${isActive ? 'active' : ''}`}>
         <li className="link">
-          <a href="../Landing_Page/LandingPage.html">Home</a>
+          <Link to="/">Home</Link>  {/* Use Link here */}
         </li>
         <li className="link">
-          <a href="/appointments">Appointments</a>
+          <Link to="/appointments">Appointments</Link>  {/* Use Link here */}
         </li>
         <li className="link">
-          <a href="../Sign_Up/Sign_Up.html">
+          <Link to="/sign-up">  {/* Use Link here */}
             <button className="btn1">Sign Up</button>
-          </a>
+          </Link>
         </li>
         <li className="link">
-          <a href="../Login/Login.html">
+          <Link to="/login">  {/* Use Link here */}
             <button className="btn1">Login</button>
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>
