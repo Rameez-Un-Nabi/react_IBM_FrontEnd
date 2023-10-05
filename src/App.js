@@ -1,27 +1,22 @@
-// eslint-disable-next-line no-unused-vars
-import React, { useEffect } from 'react';
-
-// eslint-disable-next-line no-unused-vars
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-import Navbar from './Components/NavBar/NavBar';
-// eslint-disable-next-line no-unused-vars
-import LandingPage from './Components/LandingPage/LandingPage';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './Components/NavBar/NavBar'; // Adjust the import to your file structure
+import LandingPage from './Components/LandingPage/LandingPage'; 
+// import Appointments from './Components/Appointments/Appointments'; // Sample Appointments component
+import SignUp from './Components/SignUp/SignUp'; // Sample Sign Up component
+import Login from './Components/Login/Login'; // Sample Login component
 
 function App() {
-
   return (
-    <div className="App">
-        <BrowserRouter>
-          <Navbar/>
-              <Routes>
-              <Route path="/" element={<LandingPage />} />
-
-              </Routes>
-            
-        </BrowserRouter>
-       
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        {/* <Route path="/appointments" element={<Appointments />} /> */}
+        <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+    </Router>
   );
 }
 

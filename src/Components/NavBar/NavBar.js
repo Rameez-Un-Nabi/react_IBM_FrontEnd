@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <nav>
       <div className="nav__logo">
-        <Link to="/">  {/* Use Link here */}
+        <Link to="/">  {/* Link to Home */}
           StayHealthy
         </Link>
         <span>.</span>
@@ -22,18 +22,18 @@ const Navbar = () => {
       </div>
       <ul className={`nav__links ${isActive ? 'active' : ''}`}>
         <li className="link">
-          <Link to="/">Home</Link>  {/* Use Link here */}
+          <Link to="/">Home</Link>  {/* Link to Home */}
         </li>
         <li className="link">
-          <Link to="/appointments">Appointments</Link>  {/* Use Link here */}
+          <Link to="/appointments">Appointments</Link>  {/* Link to Appointments */}
         </li>
         <li className="link">
-          <Link to="/sign-up">  {/* Use Link here */}
+          <Link to="/sign-up">  {/* Link to SignUp */}
             <button className="btn1">Sign Up</button>
           </Link>
         </li>
         <li className="link">
-          <Link to="/login">  {/* Use Link here */}
+          <Link to="/login">  {/* Link to Login */}
             <button className="btn1">Login</button>
           </Link>
         </li>
