@@ -6,7 +6,7 @@ import LandingPage from './Components/LandingPage/LandingPage';
 import SignUp from './Components/SignUp/SignUp'; // Sample Sign Up component
 import Login from './Components/Login/Login'; // Sample Login component
 import {useEffect, useState } from 'react';
-
+import InstantConsultation from './Components/InstantConsultationBooking/InstantConsultation';
 
 function App() {
 
@@ -30,6 +30,7 @@ useEffect(() => {
         <Route path="/" element={<LandingPage />} />
         {/* <Route path="/appointments" element={<Appointments />} /> */}
         <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/instant-consultation" element={<InstantConsultation />} />
         <Route path="/login" element={<Login />} />
       </Routes>
     </Router>
