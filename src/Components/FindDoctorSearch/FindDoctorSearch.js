@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './FindDoctorSearchIC.css';
+import './FindDoctorSearch.css';
 import { useNavigate, Navigate } from 'react-router-dom';
 
 
@@ -10,7 +10,7 @@ const initSpeciality = [
 const FindDoctorSearchIC = () => {
     const [doctorResultHidden, setDoctorResultHidden] = useState(true);
     const [searchDoctor, setSearchDoctor] = useState('');
-    const [specialities, setSpecialities] = useState(initSpeciality);
+    const [specialities, setSpecialities]    = useState(initSpeciality);
     const navigate = useNavigate();
     const handleDoctorSelect = (speciality) => {
         setSearchDoctor(speciality);
